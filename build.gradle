@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'io.peerislands'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.drools:drools-core:7.73.0.Final'
+    implementation 'org.drools:drools-compiler:7.73.0.Final'
+    implementation 'org.kie:kie-api:7.73.0.Final'
+    implementation 'org.kie:kie-spring:7.73.0.Final'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+application {
+    mainClass = 'io.peerislands.DroolsExample'
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,8 @@
+package io.peerislands.rules
+
+rule "Sample Rule"
+    when
+        $i : Integer(intValue > 5)
+    then
+        System.out.println("Rule triggered: " + $i);
+end
